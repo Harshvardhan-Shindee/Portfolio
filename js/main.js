@@ -223,6 +223,7 @@
     animation: "fade",
     slideshowSpeed: 5000,
     directionNav: true,
+	touch: false,
     start: function(){
       setTimeout(function(){
         $('.slider-text').removeClass('animated fadeInUp');
