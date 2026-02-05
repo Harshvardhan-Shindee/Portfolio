@@ -2178,3 +2178,27 @@ html {
     height: auto !important;
   }
 }
+
+/* ===== HERO BUTTON CLICK FIX (MOBILE) ===== */
+
+.slider-text,
+.slider-text * {
+  position: relative;
+  z-index: 50;
+  pointer-events: auto;
+}
+
+#colorlib-hero .overlay {
+  pointer-events: none !important;
+  z-index: 1;
+}
+
+#colorlib-hero .slides li {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-learn {
+  position: relative;
+  z-index: 100 !important;
+}
