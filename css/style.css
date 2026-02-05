@@ -2222,3 +2222,26 @@ html {
   z-index: 1000;
 }
 
+/* === iOS CLICK FIX FOR HERO BUTTONS === */
+@media screen and (max-width: 768px) {
+
+  #colorlib-hero,
+  #colorlib-hero * {
+    pointer-events: auto;
+  }
+
+  #colorlib-hero .flexslider,
+  #colorlib-hero .slides,
+  #colorlib-hero .slides li {
+    pointer-events: none;
+  }
+
+  #colorlib-hero .slider-text,
+  #colorlib-hero .slider-text *,
+  #colorlib-hero .btn,
+  #colorlib-hero a {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 9999;
+  }
+}
