@@ -2152,3 +2152,29 @@ body.offcanvas .colorlib-nav-toggle {
 html {
   scroll-behavior: smooth;
 }
+
+.overlay {
+  pointer-events: none;
+}
+
+.slider-text {
+  position: relative;
+  z-index: 5;
+}
+
+/* ===== MOBILE PROJECT FIX ===== */
+@media screen and (max-width: 768px) {
+  .project .desc {
+    opacity: 1 !important;          /* Always visible on mobile */
+    position: relative !important;  /* Remove absolute overlay */
+    background: rgba(0,0,0,0.65);   /* Dark background for readability */
+  }
+
+  .project {
+    height: auto !important;        /* Let content define height */
+  }
+
+  .project .desc .con {
+    height: auto !important;
+  }
+}
