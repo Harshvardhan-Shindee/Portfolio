@@ -2221,3 +2221,13 @@ html {
   position: relative;
   z-index: 1000;
 }
+
+/* FIX: Allow clicks inside slider on mobile */
+#colorlib-hero .slides li {
+  pointer-events: none;
+}
+
+#colorlib-hero .slider-text,
+#colorlib-hero .slider-text * {
+  pointer-events: auto;
+}
