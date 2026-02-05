@@ -207,38 +207,28 @@
 
 
 	var sliderMain = function() {
+		
+	  	$('#colorlib-hero .flexslider').flexslider({
+			animation: "fade",
+			slideshowSpeed: 5000,
+			directionNav: true,
+			smoothHeight: true,
+			start: function(){
+				setTimeout(function(){
+					$('.slider-text').removeClass('animated fadeInUp');
+					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+				}, 500);
+			},
+			before: function(){
+				setTimeout(function(){
+					$('.slider-text').removeClass('animated fadeInUp');
+					$('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
+				}, 500);
+			}
 
-  // Disable slider on mobile devices (fixes iPhone button click issue)
-  if (isMobile.any()) {
-    $('#colorlib-hero .flexslider').removeClass('flexslider');
-    $('#colorlib-hero .slides > li').css({
-      'display': 'block',
-      'position': 'relative'
-    });
-    return; // STOP slider from running
-  }
+	  	});
 
-  // Run slider only on desktop
-  $('#colorlib-hero .flexslider').flexslider({
-    animation: "fade",
-    slideshowSpeed: 5000,
-    directionNav: true,
-	touch: false,
-    start: function(){
-      setTimeout(function(){
-        $('.slider-text').removeClass('animated fadeInUp');
-        $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-      }, 500);
-    },
-    before: function(){
-      setTimeout(function(){
-        $('.slider-text').removeClass('animated fadeInUp');
-        $('.flex-active-slide').find('.slider-text').addClass('animated fadeInUp');
-      }, 500);
-    }
-  });
-};
-
+	};
 
 	var stickyFunction = function() {
 
