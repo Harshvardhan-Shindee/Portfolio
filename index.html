@@ -93,7 +93,7 @@
 												<div class="desc">
 													<h1>Hi! <br>I'm Harsh</h1>
 													<h2>Java Developer </h2>
-													<p><a href="assets/Harshvardhan_Shinde_Resume.pdf" download target="_blank" class="btn btn-primary btn-learn">Download CV <i
+													<p><a href="assets/Harshvardhan_Shinde_Resume.pdf" target="_blank" class="btn btn-primary btn-learn">Download CV <i
 																class="icon-download4"></i></a></p>
 												</div>
 											</div>
@@ -841,6 +841,23 @@
 			}
 		});
 	</script>
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const btn = document.querySelector('.btn-learn[href="#colorlib-work"]');
+
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const section = document.getElementById("colorlib-work");
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 20,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+</script>
 
 
 </body>
