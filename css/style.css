@@ -2202,3 +2202,22 @@ html {
   position: relative;
   z-index: 100 !important;
 }
+/* ===== iOS FLEXSLIDER CLICK FIX ===== */
+
+/* Slider layers should NOT capture touches */
+#colorlib-hero .flex-viewport,
+#colorlib-hero .slides,
+#colorlib-hero .slides li,
+#colorlib-hero .overlay {
+  pointer-events: none !important;
+}
+
+/* But actual content MUST be clickable */
+#colorlib-hero .slider-text,
+#colorlib-hero .slider-text *,
+#colorlib-hero .btn,
+#colorlib-hero a {
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 1000;
+}
