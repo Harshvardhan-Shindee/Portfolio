@@ -2059,28 +2059,31 @@ body.offcanvas .colorlib-nav-toggle {
   }
 }
 
+/* ===== SIDEBAR FULL HEIGHT FIX ===== */
+#colorlib-aside {
+  height: 100vh !important;
+  min-height: 100vh !important;
+}
 
-/* ===== SIDEBAR STABLE FOOTER LOCK ===== */
+@media screen and (max-width: 768px) {
+  #colorlib-aside {
+    height: 100svh !important;
+    min-height: 100svh !important;
+  }
+}
 
 #colorlib-aside {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 #colorlib-main-menu {
-  flex-grow: 1;
+  flex: 1;
 }
 
 .colorlib-footer {
-  flex-shrink: 0;
-  padding-bottom: 20px;
+  margin-top: auto;
 }
-
-
 
 #colorlib-aside {
   background: linear-gradient(180deg, #f8f9fb 0%, #eef1f5 100%);
