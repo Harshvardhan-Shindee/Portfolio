@@ -2152,3 +2152,36 @@ body.offcanvas .colorlib-nav-toggle {
 html {
   scroll-behavior: smooth;
 }
+
+/* flexslider dots ko click eat karne se roko */
+.flex-control-nav,
+.flex-direction-nav {
+  pointer-events: none;
+}
+
+/* but agar dots future me clickable chahiye */
+.flex-control-nav a,
+.flex-direction-nav a {
+  pointer-events: auto;
+}
+
+/* force bigger spacing in contact form */
+#contact-form .form-group {
+  margin-bottom: 30px !important;
+}
+#contact-form .form-control {
+  height: 52px;
+}
+
+#contact-form textarea.form-control {
+  height: 140px;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif !important;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif !important;
+}
