@@ -2185,3 +2185,21 @@ body {
 h2, h3, h4, h5, h6 {
   font-family: 'Inter', sans-serif !important;
 }
+/* fix mobile overlapping */
+.social-icons {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center;
+  clear: both;
+}
+.social-icons li,
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+}
+@media (max-width: 768px) {
+  .social-icons {
+    margin: 25px 0;
+  }
+}
